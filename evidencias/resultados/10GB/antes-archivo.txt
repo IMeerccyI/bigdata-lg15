@@ -1,0 +1,1 @@
+-rw-r--r--   2 root supergroup 10000000000 2026-10-11 23:52 /lg15/dataset_10GB/dataset_10GB.bin

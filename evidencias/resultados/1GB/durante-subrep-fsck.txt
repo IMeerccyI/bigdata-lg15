@@ -1,0 +1,52 @@
+FSCK started by root (auth:SIMPLE) from /172.21.0.2 for path /lg15/dataset_1GB/dataset_1GB.bin at Mon Oct 12 00:15:06 UTC 2026
+/lg15/dataset_1GB/dataset_1GB.bin 1000000000 bytes, replicated: replication=2, 8 block(s):  Under replicated BP-1233202177-172.21.0.2-1791761986983:blk_1073741842_1018. Target Replicas is 2 but found 1 live replica(s), 0 decommissioned replica(s), 0 decommissioning replica(s).
+ Under replicated BP-1233202177-172.21.0.2-1791761986983:blk_1073741843_1019. Target Replicas is 2 but found 1 live replica(s), 0 decommissioned replica(s), 0 decommissioning replica(s).
+ Under replicated BP-1233202177-172.21.0.2-1791761986983:blk_1073741845_1021. Target Replicas is 2 but found 1 live replica(s), 0 decommissioned replica(s), 0 decommissioning replica(s).
+ Under replicated BP-1233202177-172.21.0.2-1791761986983:blk_1073741846_1022. Target Replicas is 2 but found 1 live replica(s), 0 decommissioned replica(s), 0 decommissioning replica(s).
+ Under replicated BP-1233202177-172.21.0.2-1791761986983:blk_1073741848_1024. Target Replicas is 2 but found 1 live replica(s), 0 decommissioned replica(s), 0 decommissioning replica(s).
+0. BP-1233202177-172.21.0.2-1791761986983:blk_1073741841_1017 len=134217728 Live_repl=2  [DatanodeInfoWithStorage[172.21.0.5:9866,DS-c3b798dd-d2f8-48c6-b50a-49ee9196e3ba,DISK], DatanodeInfoWithStorage[172.21.0.3:9866,DS-be0be614-505e-44d8-96b4-a78e4e8a5823,DISK]]
+1. BP-1233202177-172.21.0.2-1791761986983:blk_1073741842_1018 len=134217728 Live_repl=1  [DatanodeInfoWithStorage[172.21.0.3:9866,DS-be0be614-505e-44d8-96b4-a78e4e8a5823,DISK]]
+2. BP-1233202177-172.21.0.2-1791761986983:blk_1073741843_1019 len=134217728 Live_repl=1  [DatanodeInfoWithStorage[172.21.0.3:9866,DS-be0be614-505e-44d8-96b4-a78e4e8a5823,DISK]]
+3. BP-1233202177-172.21.0.2-1791761986983:blk_1073741844_1020 len=134217728 Live_repl=2  [DatanodeInfoWithStorage[172.21.0.5:9866,DS-c3b798dd-d2f8-48c6-b50a-49ee9196e3ba,DISK], DatanodeInfoWithStorage[172.21.0.3:9866,DS-be0be614-505e-44d8-96b4-a78e4e8a5823,DISK]]
+4. BP-1233202177-172.21.0.2-1791761986983:blk_1073741845_1021 len=134217728 Live_repl=1  [DatanodeInfoWithStorage[172.21.0.3:9866,DS-be0be614-505e-44d8-96b4-a78e4e8a5823,DISK]]
+5. BP-1233202177-172.21.0.2-1791761986983:blk_1073741846_1022 len=134217728 Live_repl=1  [DatanodeInfoWithStorage[172.21.0.5:9866,DS-c3b798dd-d2f8-48c6-b50a-49ee9196e3ba,DISK]]
+6. BP-1233202177-172.21.0.2-1791761986983:blk_1073741847_1023 len=134217728 Live_repl=2  [DatanodeInfoWithStorage[172.21.0.3:9866,DS-be0be614-505e-44d8-96b4-a78e4e8a5823,DISK], DatanodeInfoWithStorage[172.21.0.5:9866,DS-c3b798dd-d2f8-48c6-b50a-49ee9196e3ba,DISK]]
+7. BP-1233202177-172.21.0.2-1791761986983:blk_1073741848_1024 len=60475904 Live_repl=1  [DatanodeInfoWithStorage[172.21.0.3:9866,DS-be0be614-505e-44d8-96b4-a78e4e8a5823,DISK]]
+
+
+Status: HEALTHY
+ Number of data-nodes:	2
+ Number of racks:		1
+ Total dirs:			0
+ Total symlinks:		0
+
+Replicated Blocks:
+ Total size:	1000000000 B
+ Total files:	1
+ Total blocks (validated):	8 (avg. block size 125000000 B)
+ Minimally replicated blocks:	8 (100.0 %)
+ Over-replicated blocks:	0 (0.0 %)
+ Under-replicated blocks:	5 (62.5 %)
+ Mis-replicated blocks:		0 (0.0 %)
+ Default replication factor:	2
+ Average block replication:	1.375
+ Missing blocks:		0
+ Corrupt blocks:		0
+ Missing replicas:		5 (31.25 %)
+
+Erasure Coded Block Groups:
+ Total size:	0 B
+ Total files:	0
+ Total block groups (validated):	0
+ Minimally erasure-coded block groups:	0
+ Over-erasure-coded block groups:	0
+ Under-erasure-coded block groups:	0
+ Unsatisfactory placement block groups:	0
+ Average block group size:	0.0
+ Missing block groups:		0
+ Corrupt block groups:		0
+ Missing internal blocks:	0
+FSCK ended at Mon Oct 12 00:15:06 UTC 2026 in 0 milliseconds
+
+
+The filesystem under path '/lg15/dataset_1GB/dataset_1GB.bin' is HEALTHY

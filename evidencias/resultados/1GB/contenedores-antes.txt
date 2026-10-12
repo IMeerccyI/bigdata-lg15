@@ -1,0 +1,5 @@
+NAME              IMAGE                                             COMMAND                  SERVICE     CREATED          STATUS                    PORTS
+lg15-datanode-1   bde2020/hadoop-datanode:2.0.0-hadoop3.2.1-java8   "/entrypoint.sh /run…"   datanode1   34 minutes ago   Up 34 minutes (healthy)   0.0.0.0:9865->9864/tcp, [::]:9865->9864/tcp
+lg15-datanode-2   bde2020/hadoop-datanode:2.0.0-hadoop3.2.1-java8   "/entrypoint.sh /run…"   datanode2   34 minutes ago   Up 6 minutes (healthy)    0.0.0.0:9866->9864/tcp, [::]:9866->9864/tcp
+lg15-datanode-3   bde2020/hadoop-datanode:2.0.0-hadoop3.2.1-java8   "/entrypoint.sh /run…"   datanode3   34 minutes ago   Up 34 minutes (healthy)   0.0.0.0:9867->9864/tcp, [::]:9867->9864/tcp
+lg15-namenode     bde2020/hadoop-namenode:2.0.0-hadoop3.2.1-java8   "/entrypoint.sh /run…"   namenode    34 minutes ago   Up 34 minutes (healthy)   0.0.0.0:9002->9000/tcp, [::]:9002->9000/tcp, 0.0.0.0:9871->9870/tcp, [::]:9871->9870/tcp

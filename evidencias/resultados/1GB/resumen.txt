@@ -1,0 +1,10 @@
+Dataset: 1GB
+Tamaño exacto: 1000000000 bytes
+Archivo HDFS: /lg15/dataset_1GB/dataset_1GB.bin
+DataNode detenido: datanode2
+Bloques inicialmente ubicados en el nodo detenido: 5
+Tiempo hasta detectar la caída: 31 segundos
+Tiempo desde detección hasta recuperar la replicación: 29 segundos
+SHA256 original: 4fab70b55a44a7c87d3d387438d0a4e67d0bf70474f8cd30dd3ca0a29f73cde6
+SHA256 leído durante la falla: 4fab70b55a44a7c87d3d387438d0a4e67d0bf70474f8cd30dd3ca0a29f73cde6
+Lectura durante la falla: correcta
