@@ -1,0 +1,85 @@
+services:
+  namenode:
+    image: bde2020/hadoop-namenode:2.0.0-hadoop3.2.1-java8
+    container_name: lg15-namenode
+    hostname: namenode
+    environment: &hadoop-environment
+      CLUSTER_NAME: lg15-hdfs
+      CORE_CONF_fs_defaultFS: hdfs://namenode:9000
+      HDFS_CONF_dfs_replication: 2
+      HDFS_CONF_dfs_blocksize: 134217728
+      HDFS_CONF_dfs_heartbeat_interval: 1
+      HDFS_CONF_dfs_namenode_heartbeat_recheck___interval: 10000
+      HDFS_CONF_dfs_permissions_enabled: "false"
+      HDFS_CONF_dfs_namenode_datanode_registration_ip___hostname___check: "false"
+    ports:
+      - "9871:9870"
+      - "9002:9000"
+    volumes:
+      - namenode-data:/hadoop/dfs/name
+      - ./datasets:/datasets:ro
+    healthcheck:
+      test: ["CMD-SHELL", "hdfs dfs -ls / >/dev/null 2>&1"]
+      interval: 5s
+      timeout: 5s
+      retries: 24
+      start_period: 20s
+
+  datanode1:
+    image: bde2020/hadoop-datanode:2.0.0-hadoop3.2.1-java8
+    container_name: lg15-datanode-1
+    hostname: datanode1
+    environment: &datanode-environment
+      <<: *hadoop-environment
+      SERVICE_PRECONDITION: namenode:9870
+    ports:
+      - "9865:9864"
+    volumes:
+      - datanode1-data:/hadoop/dfs/data
+    depends_on:
+      namenode:
+        condition: service_healthy
+    healthcheck: &datanode-healthcheck
+      test: ["CMD-SHELL", "curl --fail --silent http://localhost:9864/ >/dev/null"]
+      interval: 5s
+      timeout: 5s
+      retries: 24
+      start_period: 20s
+
+  datanode2:
+    image: bde2020/hadoop-datanode:2.0.0-hadoop3.2.1-java8
+    container_name: lg15-datanode-2
+    hostname: datanode2
+    environment: *datanode-environment
+    ports:
+      - "9866:9864"
+    volumes:
+      - datanode2-data:/hadoop/dfs/data
+    depends_on:
+      namenode:
+        condition: service_healthy
+    healthcheck: *datanode-healthcheck
+
+  datanode3:
+    image: bde2020/hadoop-datanode:2.0.0-hadoop3.2.1-java8
+    container_name: lg15-datanode-3
+    hostname: datanode3
+    environment: *datanode-environment
+    ports:
+      - "9867:9864"
+    volumes:
+      - datanode3-data:/hadoop/dfs/data
+    depends_on:
+      namenode:
+        condition: service_healthy
+    healthcheck: *datanode-healthcheck
+
+networks:
+  default:
+    name: lg15-hdfs
+
+volumes:
+  namenode-data:
+  datanode1-data:
+  datanode2-data:
+  datanode3-data:
