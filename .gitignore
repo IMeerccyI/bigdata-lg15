@@ -1,9 +1,0 @@
-# Los datasets de 1 GB y 10 GB se generan localmente y no se suben a Git.
-/datasets/
-
-# Memoria técnica local de Codex.
-/AGENTS.md
-/docs/
-
-# Archivos temporales.
-*.log
