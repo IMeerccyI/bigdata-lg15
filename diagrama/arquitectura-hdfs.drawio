@@ -1,0 +1,21 @@
+<mxfile host="app.diagrams.net" modified="2026-10-11T00:00:00.000Z" agent="Codex" version="24.7.17" type="device">
+  <diagram id="lg15-hdfs" name="Arquitectura HDFS LG15">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="800" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="title" value="LG15  Tolerancia a fallos y replicación en HDFS" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=25;fontStyle=1;fontColor=#111827;" vertex="1" parent="1"><mxGeometry x="150" y="35" width="900" height="50" as="geometry"/></mxCell>
+        <mxCell id="client" value="Cliente HDFS&lt;br&gt;Archivos sintéticos 1 GB y 10 GB" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E0F2FE;strokeColor=#0284C7;fontSize=17;spacing=10;" vertex="1" parent="1"><mxGeometry x="50" y="180" width="240" height="100" as="geometry"/></mxCell>
+        <mxCell id="namenode" value="NameNode&lt;br&gt;Metadatos y ubicación de bloques" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EDE9FE;strokeColor=#7C3AED;fontSize=17;spacing=10;" vertex="1" parent="1"><mxGeometry x="450" y="145" width="300" height="110" as="geometry"/></mxCell>
+        <mxCell id="dn1" value="DataNode 1&lt;br&gt;Volumen independiente" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DCFCE7;strokeColor=#16A34A;fontSize=17;spacing=10;" vertex="1" parent="1"><mxGeometry x="95" y="420" width="270" height="105" as="geometry"/></mxCell>
+        <mxCell id="dn2" value="DataNode 2&lt;br&gt;Se detiene durante la prueba" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FEE2E2;strokeColor=#DC2626;fontSize=17;spacing=10;" vertex="1" parent="1"><mxGeometry x="465" y="420" width="270" height="105" as="geometry"/></mxCell>
+        <mxCell id="dn3" value="DataNode 3&lt;br&gt;Puede recibir una nueva réplica" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DCFCE7;strokeColor=#16A34A;fontSize=17;spacing=10;" vertex="1" parent="1"><mxGeometry x="835" y="420" width="270" height="105" as="geometry"/></mxCell>
+        <mxCell id="note" value="Factor de replicación 2  ·  Bloques de 128 MiB  ·  3 DataNodes" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=18;fontColor=#334155;" vertex="1" parent="1"><mxGeometry x="180" y="630" width="840" height="50" as="geometry"/></mxCell>
+        <mxCell id="e1" value="consulta metadatos" style="endArrow=block;html=1;rounded=1;strokeColor=#0284C7;fontSize=13;" edge="1" parent="1" source="client" target="namenode"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e2" value="control" style="endArrow=block;html=1;rounded=1;strokeColor=#16A34A;fontSize=13;" edge="1" parent="1" source="namenode" target="dn1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e3" value="control" style="endArrow=block;html=1;rounded=1;strokeColor=#DC2626;fontSize=13;" edge="1" parent="1" source="namenode" target="dn2"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e4" value="nuevas réplicas" style="endArrow=block;html=1;rounded=1;strokeColor=#16A34A;fontSize=13;" edge="1" parent="1" source="namenode" target="dn3"><mxGeometry relative="1" as="geometry"/></mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

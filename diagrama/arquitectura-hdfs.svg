@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Arquitectura HDFS LG15</title>
+  <desc id="desc">El NameNode administra los metadatos y la ubicación de bloques. Tres DataNodes almacenan los bloques de archivos de 1 y 10 GB. HDFS mantiene dos réplicas por bloque y recupera la replicación al caer el DataNode 2.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="11" markerHeight="11" refX="10" refY="5.5" orient="auto"><path d="M0 0 L11 5.5 L0 11 Z" fill="#475569"/></marker>
+    <style>
+      text { font-family: Arial, sans-serif; fill: #111827; }
+      .heading { font-size: 28px; font-weight: 700; }
+      .label { font-size: 21px; font-weight: 700; }
+      .body { font-size: 17px; }
+      .line { fill: none; stroke: #475569; stroke-width: 3; marker-end: url(#arrow); }
+    </style>
+  </defs>
+  <rect width="1200" height="760" fill="#ffffff"/>
+  <text x="600" y="67" text-anchor="middle" class="heading">LG15  Tolerancia a fallos y replicación en HDFS</text>
+  <rect x="50" y="175" width="240" height="110" rx="14" fill="#e0f2fe" stroke="#0284c7" stroke-width="3"/>
+  <text x="170" y="215" text-anchor="middle" class="label">Cliente HDFS</text>
+  <text x="170" y="247" text-anchor="middle" class="body">Archivos de 1 GB y 10 GB</text>
+  <rect x="450" y="155" width="300" height="120" rx="14" fill="#ede9fe" stroke="#7c3aed" stroke-width="3"/>
+  <text x="600" y="200" text-anchor="middle" class="label">NameNode</text>
+  <text x="600" y="235" text-anchor="middle" class="body">Metadatos y ubicación de bloques</text>
+  <path d="M290 230 H440" class="line"/>
+  <text x="365" y="218" text-anchor="middle" class="body">consulta</text>
+  <path d="M530 275 L230 415" class="line"/>
+  <path d="M600 275 V415" class="line"/>
+  <path d="M670 275 L970 415" class="line"/>
+  <rect x="85" y="425" width="290" height="120" rx="14" fill="#dcfce7" stroke="#16a34a" stroke-width="3"/>
+  <text x="230" y="470" text-anchor="middle" class="label">DataNode 1</text>
+  <text x="230" y="505" text-anchor="middle" class="body">Volumen independiente</text>
+  <rect x="455" y="425" width="290" height="120" rx="14" fill="#fee2e2" stroke="#dc2626" stroke-width="3"/>
+  <text x="600" y="470" text-anchor="middle" class="label">DataNode 2</text>
+  <text x="600" y="505" text-anchor="middle" class="body">Detenido en la prueba</text>
+  <rect x="825" y="425" width="290" height="120" rx="14" fill="#dcfce7" stroke="#16a34a" stroke-width="3"/>
+  <text x="970" y="470" text-anchor="middle" class="label">DataNode 3</text>
+  <text x="970" y="505" text-anchor="middle" class="body">Recibe nuevas réplicas</text>
+  <text x="600" y="635" text-anchor="middle" class="body">Replicación 2  ·  Bloques de 128 MiB  ·  Tres DataNodes</text>
+  <text x="600" y="670" text-anchor="middle" class="body">Con un nodo caído, la otra copia permite leer y HDFS restaura la segunda.</text>
+</svg>
